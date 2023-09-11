@@ -1,4 +1,5 @@
 import Message from "./Message";
+// @ts-ignore
 import ListGroup from "./components/ListGroup";
 
 function App() {
