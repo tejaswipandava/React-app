@@ -5,7 +5,8 @@
     2 functional components : these are popular for being easy and less code to write
 */
 function Message(){
-    return <h1>Hello World</h1>
+    const name = "Teja"
+    return <h1>Hello {name}</h1>
 }
 
 export default Message;
