@@ -1,20 +1,27 @@
+import { useState } from "react";
+
 function ListGroup() {
   var items = ["egg", "chicken", "rice", "vegetables", "pasta", "pizza"];
 
-  const getMessage = () => {
-    return items.length === 0 ? <p>No element found</p> : null;
+  const getClassName = (selectElement, index) => {
+    return selectElement === index
+      ? "list-group-item active"
+      : "list-group-item";
   };
+
+  let [selectElement, setSelectedElement] = useState(-1);
 
   return (
     <>
       <h1>We have 2 elements</h1>
-      {getMessage()}
       <ul className="list-group">
         {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className={getClassName(selectElement, index)}
             key={item}
-            onClick={(event) => console.log(item, index)}
+            onClick={() => {
+              setSelectedElement(index);
+            }}
           >
             {item}
           </li>
