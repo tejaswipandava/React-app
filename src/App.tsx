@@ -3,14 +3,17 @@ import Message from "./Message";
 import ListGroup from "./components/ListGroup";
 
 function App() {
-  var items = ["egg", "chicken", "rice", "vegetables", "pasta", "pizza"];
+  let items = ["egg", "chicken", "rice", "vegetables", "pasta", "pizza"];
+  let selectedItem =(item:String)=>{
+      console.log(item)
+    }
   return (
     <>
       <div>
         <Message />
       </div>
       <div>
-        <ListGroup items={items} heading="We have 6 elements" />
+        <ListGroup items={items} heading="We have 6 elements" onSelectItem={selectedItem}/>
       </div>
     </>
   );
