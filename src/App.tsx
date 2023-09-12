@@ -3,13 +3,14 @@ import Message from "./Message";
 import ListGroup from "./components/ListGroup";
 
 function App() {
+  var items = ["egg", "chicken", "rice", "vegetables", "pasta", "pizza"];
   return (
     <>
       <div>
         <Message />
       </div>
       <div>
-        <ListGroup />
+        <ListGroup items={items} heading="We have 6 elements" />
       </div>
     </>
   );

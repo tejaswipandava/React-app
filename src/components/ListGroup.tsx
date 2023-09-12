@@ -1,19 +1,22 @@
 import { useState } from "react";
 
-function ListGroup() {
-  var items = ["egg", "chicken", "rice", "vegetables", "pasta", "pizza"];
+interface Props {
+  items: string[];
+  heading: string;
+}
 
-  const getClassName = (selectElement, index) => {
+function ListGroup({ items, heading }: Props) {
+  let [selectElement, setSelectedElement] = useState(-1);
+
+  let getClassName = (selectElement: number, index: number) => {
     return selectElement === index
       ? "list-group-item active"
       : "list-group-item";
   };
 
-  let [selectElement, setSelectedElement] = useState(-1);
-
   return (
     <>
-      <h1>We have 2 elements</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {items.map((item, index) => (
           <li
