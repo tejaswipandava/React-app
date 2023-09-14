@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div>
-        <Alert text={"Well finally i am able to print text"} />
+        <Alert>Well finally i am able to print text</Alert>
       </div>
       <div>
         <Message />

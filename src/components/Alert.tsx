@@ -1,9 +1,9 @@
 interface Prop {
-  text: String;
+  children: String;
 }
 
-const Alert = ({ text }: Prop) => {
-  return <div className="alert alert-primary">{text}</div>;
+const Alert = ({ children }: Prop) => {
+  return <div className="alert alert-primary">{children}</div>;
 };
 
 export default Alert;
